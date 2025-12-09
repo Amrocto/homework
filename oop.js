@@ -16,10 +16,20 @@ function Orc(race,name,language,weapon){
 let spell = 0;
 Orc.prototype = Object.create(Character.prototype);
 Orc.prototype.constructor = Orc;
+
+
 Orc.prototype.hit = function(){
     console.log('a blow occurred');
 }
-Orc.prototype.spell = function(){
+const orc1 = new Orc('orc', 'Gork', 'EU', 'axe');
+function Elf(race,name,language,spell){
+    Character.call(this, race,name,language);
+    this.spell = spell;
+}
+Elf.prototype = Object.create(Character.prototype);
+Elf.prototype.constructor = Elf;
+
+Elf.prototype.spell = function(){
     if (spell <= 0){
         return;
     } else {
@@ -27,18 +37,11 @@ Orc.prototype.spell = function(){
     console.log('you were poisoned');
     }
 }
-Orc.prototype.createSpell = function(){
+
+Elf.prototype.createSpell = function(){
     spell++;
     console.log(`a spell was created. Quantity: ${spell}`)
 }
-const orc1 = new Orc('orc', 'Gork', 'EU', 'axe');
-orc1.toSpeak()
-
-orc1.createSpell();
-orc1.spell();
-orc1.spell();
-
-
 // function myFunction (){
 //     console.log(this);
 // }
