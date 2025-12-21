@@ -15,11 +15,11 @@ class Car {
         this.#mileage = amount;
     }
     get mileage(){
-        return console.log(this.#mileage);
+        return this.#mileage;
     }
 
     info(){
-        return `Марка: ${this.#mark}, Модель: ${this.#model}, Пробег: ${this.#mileage}`
+        return console.log(`Марка: ${this.#mark}, Модель: ${this.#model}, Пробег: ${this.#mileage}`);
     }
 }
 
