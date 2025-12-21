@@ -1,9 +1,10 @@
 let spell = 0;
 class Character{
-    constructor(){
+    constructor(race, name, language){
         this.race = race;
         this.name = name;
         this.language = language;
+        this.quanSpell = 0;
     }
     toSpeak(){
         console.log(`language: ${this.language} and name character ${this.name}`)
@@ -18,6 +19,10 @@ class Orc extends Character{
     bit(){
         console.log('a blow occured')
     }
+
+    toSpeak(){
+        console.log(`I am ork. language: ${this.language} and name character ${this.name}`)
+    }
 }
 
 
@@ -29,36 +34,27 @@ class Elf extends  Character{
         this.spell = spell;
     }
 
-    spell(){
-        if (slell <= 0) {
+    useSpell(){
+        if (this.quanSpell <= 0) {
             return;
         } else {
-            spell --;
+            this.quanSpell --;
             console.log('you were poisoned');
         }
     }
 
     createSpell(){
-        spell++;
-        console.log(`a spell was created. Quantity ${spell}`)
+        this.quanSpell++;
+        console.log(`a spell was created. Quantity ${this.spell}`);
+    }
+
+    toSpeak(){
+        console.log(`I am Elf. language: ${this.language} and name character ${this.name}`)
     }
 }
 
 
 
-Elf.prototype.spell = function(){
-    if (spell <= 0){
-        return;
-    } else {
-        spell--;
-    console.log('you were poisoned');
-    }
-}
-
-Elf.prototype.createSpell = function(){
-    spell++;
-    console.log(`a spell was created. Quantity: ${spell}`)
-}
 
 
 // // function-constructor ES5
