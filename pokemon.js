@@ -13,7 +13,8 @@ xhr.addEventListener('load', function(){
             xhr2.send();
             xhr2.addEventListener('load', function(){
                 const data = JSON.parse(this.response);
-                console.log(data);
+                const englishEntry = data.effect_entries.find(entry => entry.language.name === 'en'); 
+                console.log(englishEntry.effect);
             })
         }
         catch(err){
