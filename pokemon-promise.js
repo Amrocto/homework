@@ -36,4 +36,7 @@ function getAbility(url){
     })
     .then(data => data.effect_entries.find(entry => entry.language.name === 'en').effect);
 }
-getAbility(url).then(response => console.log(response)).catch(err => console.error(err.message)));
+
+getAbility(url)
+.then(response => console.log(response))
+.catch(err => console.error(err.message));
