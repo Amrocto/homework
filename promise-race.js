@@ -1,4 +1,11 @@
 async function race(promises){
-    const result = Promise.race(promises);
-    return result;
+    const final = await new Promise((resolve, reject) => {
+    promises.forEach(el => {
+        try{
+            resolve();
+        } catch(e){
+            reject(e);
+    }
+    });
+});
 }
