@@ -1,0 +1,28 @@
+html{
+    display: flex;
+    justify-content: center;
+    color:#0e0e0e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+.wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+button{
+    background-color: #FF7A53;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    padding:10px 20px;
+    margin: 30px 0 ;
+}
+button:nth-child(6n + 1){ background:#FF7A53; }
+button:nth-child(6n + 2){ background:#4C6FFF; }
+button:nth-child(6n + 3){ background:#22C55E; }
+button:nth-child(6n + 4){ background:#A855F7; }
+button:nth-child(6n + 5){ background:#F59E0B; }
+button:nth-child(6n + 6){ background:#06B6D4; }
