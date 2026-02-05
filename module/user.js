@@ -4,6 +4,6 @@ export class User{
         this.Task = Task;
     }
     do(){
-        Task.run();
+        this.Task.run();
     }
 }

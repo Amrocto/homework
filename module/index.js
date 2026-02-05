@@ -1,4 +1,5 @@
 import {Task} from './task.js';
 import {User} from './user.js';
-const first = new User('hello');
-first.do();
+const task = new Task('hello');
+const user = new User(task);
+user.do();
